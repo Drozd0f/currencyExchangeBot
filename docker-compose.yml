@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  bot:
+    command: bash -c "python3 /bot/main.py"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      PYTHONUNBUFFERED: 1
+      TOKEN: ${TOKEN}
